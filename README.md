@@ -39,48 +39,6 @@ Built with **React**, **Node.js/Express**, and **SQLite** as a hands-on full-sta
 
 ---
 
-## 📁 Project Structure
-blog-platform/
-├── backend/
-│   ├── db/
-│   │   └── database.js          # SQLite connection + table setup
-│   ├── middleware/
-│   │   └── auth.js              # JWT authentication middleware
-│   ├── routes/
-│   │   ├── auth.js              # /api/auth — register, login, me
-│   │   ├── posts.js             # /api/posts — CRUD
-│   │   └── comments.js          # /api/comments — add, delete
-│   ├── .env                     # Environment variables
-│   ├── server.js                # Express app entry point
-│   └── package.json
-│
-└── frontend/
-├── public/
-│   └── index.html
-├── src/
-│   ├── api/
-│   │   └── axios.js         # Axios instance with auth interceptor
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── PostCard.jsx
-│   │   └── CommentSection.jsx
-│   ├── context/
-│   │   └── AuthContext.jsx  # Global auth state
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── CreatePost.jsx
-│   │   ├── EditPost.jsx
-│   │   └── PostDetail.jsx
-│   ├── App.jsx              # Routes + protected routes
-│   ├── main.jsx
-│   └── index.css
-├── .env
-└── package.json
-
----
-
 ## ⚙️ Getting Started
 
 ### Prerequisites
