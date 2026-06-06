@@ -43,14 +43,14 @@ Built with **React**, **Node.js/Express**, and **SQLite** as a hands-on full-sta
 blog-platform/
 ├── backend/
 │   ├── db/
-│   │   └── database.js          # SQLite connection + table creation
+│   │   └── database.js          # SQLite connection + table setup
 │   ├── middleware/
 │   │   └── auth.js              # JWT authentication middleware
 │   ├── routes/
-│   │   ├── auth.js              # /api/auth → register, login, me
-│   │   ├── posts.js             # /api/posts → CRUD operations
-│   │   └── comments.js          # /api/comments → add, delete
-│   ├── .env                     # Environment variables (not committed)
+│   │   ├── auth.js              # /api/auth — register, login, me
+│   │   ├── posts.js             # /api/posts — CRUD
+│   │   └── comments.js          # /api/comments — add, delete
+│   ├── .env                     # Environment variables
 │   ├── server.js                # Express app entry point
 │   └── package.json
 │
@@ -65,7 +65,7 @@ blog-platform/
 │   │   ├── PostCard.jsx
 │   │   └── CommentSection.jsx
 │   ├── context/
-│   │   └── AuthContext.jsx  # Global auth state via React Context
+│   │   └── AuthContext.jsx  # Global auth state
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── Login.jsx
@@ -73,10 +73,10 @@ blog-platform/
 │   │   ├── CreatePost.jsx
 │   │   ├── EditPost.jsx
 │   │   └── PostDetail.jsx
-│   ├── App.jsx              # Routes + protected route logic
+│   ├── App.jsx              # Routes + protected routes
 │   ├── main.jsx
 │   └── index.css
-├── .env                     # Environment variables (not committed)
+├── .env
 └── package.json
 
 ---
