@@ -46,19 +46,18 @@ app.get("/", (req, res) => {
 app.get("/api/health", (req, res) => res.json({ status: "OK" }));
 
 // Server configuration
+// Server configuration
 const PORT = process.env.PORT || 5001;
-const HOST = process.env.HOST || "0.0.0.0"; // "0.0.0.0" allows external/Docker/cloud connections
 
-const server = app.listen(PORT, HOST, () => {
-  console.log(`🚀 Server running on http://${HOST}:${PORT}`);
+// Render requires binding strictly to "0.0.0.0" to routing external traffic
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
 
 // Error handling
 server.on("error", (error) => {
   if (error.code === "EADDRINUSE") {
-    console.error(`Port ${PORT} is already in use. Stop the other server or set PORT to a different value.`);
-  } else if (error.code === "EPERM") {
-    console.error(`Cannot bind to ${HOST}:${PORT}. Try a different PORT or HOST in backend/.env.`);
+    console.error(`Port ${PORT} is already in use.`);
   } else {
     console.error(error);
   }
